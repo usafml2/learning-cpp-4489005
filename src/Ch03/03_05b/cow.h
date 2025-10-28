@@ -1,4 +1,5 @@
-// This called an include gurad
+// This is called an include guard
+// It prevents the contents of this file from being included more than once//
 #pragma once
 
 #ifndef COW_H
