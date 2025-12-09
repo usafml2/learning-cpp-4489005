@@ -1,6 +1,6 @@
 #include "records.h"
 
-Student::Student(int the_id, std::string the_name){
+Student::Student(int the_id, std::string the_name){ // constructor
     id = the_id;
     name = the_name;
 }
@@ -11,7 +11,7 @@ std::string Student::get_name() const{
     return name;
 }
 
-Course::Course(int the_id, std::string the_name, unsigned char the_credits){
+Course::Course(int the_id, std::string the_name, unsigned char the_credits){ // constructor
     id = the_id;
     name = the_name;
     credits = the_credits;
@@ -27,7 +27,7 @@ int Course::get_credits() const{
 }
 
 
-Grade::Grade(int sid, int cid, char grd){
+Grade::Grade(int sid, int cid, char grd){ // constructor
     student_id = sid;
     course_id = cid;
     grade = grd;
@@ -85,4 +85,13 @@ unsigned char StudentRecords::get_course_credits(int cid) const{
     return courses[j].get_credits();
 }
 
-float StudentRecords::get_GPA(int sid) const{}
+float StudentRecords::get_GPA(int sid) const{
+     float points = 0.0f, credits = 0.0f;
+     for (const Grade& grd : grades)
+        if (grd.get_student_id() == sid){
+            unsigned char current_credits = get_course_credits(grd.get_course_id());
+            credits += current_credits;
+            points += get_num_grade(grd.get_grade()) * current_credits;
+        }
+       return (points / credits);
+}
