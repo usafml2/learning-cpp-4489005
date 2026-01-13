@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 
-Student::Student(int the_id, std::string the_name){
+Student::Student(int the_id, std::string the_name){ // constructor
     id = the_id;
     name = the_name;
 }
@@ -13,7 +13,7 @@ std::string Student::get_name() const{
     return name;
 }
 
-Course::Course(int the_id, std::string the_name, unsigned char the_credits){
+Course::Course(int the_id, std::string the_name, unsigned char the_credits){ // constructor
     id = the_id;
     name = the_name;
     credits = the_credits;
@@ -29,7 +29,7 @@ int Course::get_credits() const{
 }
 
 
-Grade::Grade(int sid, int cid, char grd){
+Grade::Grade(int sid, int cid, char grd){ // constructor
     student_id = sid;
     course_id = cid;
     grade = grd;
@@ -44,19 +44,19 @@ char Grade::get_grade() const{
     return grade;
 }
 
-void StudentRecords::add_student(int sid, std::string sname){
-    students.push_back(Student(sid, sname));
+void StudentRecords::add_student(int sid, std::string sname){ // add a student
+    students.push_back(Student(sid, sname)); // create and add a Student object
 }
 
-void StudentRecords::add_course(int cid, std::string cname, unsigned char ccredits){
-    courses.push_back(Course(cid, cname, ccredits));
+void StudentRecords::add_course(int cid, std::string cname, unsigned char ccredits){ // add a course
+    courses.push_back(Course(cid, cname, ccredits)); // create and add a Course object
 }
 
-void StudentRecords::add_grade(int sid, int cid, char grade){
-    grades.push_back(Grade(sid, cid, grade));
+void StudentRecords::add_grade(int sid, int cid, char grade){ // add a grade
+    grades.push_back(Grade(sid, cid, grade)); // create and add a Grade object
 }
 
-float StudentRecords::get_num_grade(char letter) const{
+float StudentRecords::get_num_grade(char letter) const{ // convert letter grade to numeric
     float num_grd;          // float for the numeric grade
     switch (letter){
         case 'A': num_grd = 4.0f;
@@ -73,21 +73,21 @@ float StudentRecords::get_num_grade(char letter) const{
     return num_grd;
 }
 
-std::string StudentRecords::get_student_name(int sid) const{
+std::string StudentRecords::get_student_name(int sid) const{ // get student name
     int i = 0;
     while (i < students.size() && students[i].get_id() != sid)
         i++;
     return students[i].get_name();
 }
 
-unsigned char StudentRecords::get_course_credits(int cid) const{
+unsigned char StudentRecords::get_course_credits(int cid) const{ // get course credits
     int j = 0;
     while (j < courses.size() && courses[j].get_id() != cid)
         j++;
     return courses[j].get_credits();
 }
 
-float StudentRecords::get_GPA(int sid) const{
+float StudentRecords::get_GPA(int sid) const{ // calculate GPA
     float points = 0.0f, credits = 0.0f;
     for (const Grade& grd : grades)
         if (grd.get_student_id() == sid){
@@ -99,14 +99,14 @@ float StudentRecords::get_GPA(int sid) const{
     return (points / credits);
 }
 
-std::string StudentRecords::get_course_name(int cid) const{
+std::string StudentRecords::get_course_name(int cid) const{ // get course name
     int j = 0;
     while (j < courses.size() && courses[j].get_id() != cid)
         j++;
     return courses[j].get_name();
 }
 
-void StudentRecords::report_card(int sid, std::ostream& stream){
+void StudentRecords::report_card(int sid, std::ostream& stream){ // print report card
     float points = 0.0f, credits = 0.0f;
     stream << std::endl << "Report Card for " << get_student_name(sid) << std::endl;
     for (Grade& grd : grades)

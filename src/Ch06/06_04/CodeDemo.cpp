@@ -7,17 +7,18 @@
 #include <vector>
 #include "records.h"
 
-void initialize(StudentRecords&);
-void initialize(StudentRecords&, std::ifstream&);
+// Function prototypes for 2 new functions
+void initialize(StudentRecords&); // previous version. & is for passing by reference
+void initialize(StudentRecords&, std::ifstream&); // new version. & is for passing by reference
 
 int main(){
     StudentRecords SR;
     int id;
-    std::ifstream inFile;
-    std::ofstream outFile;
+    std::ifstream inFile; // new version. Created file stream object inFile
+    std::ofstream outFile; // new version. Created file stream object outFile
 
-    initialize(SR, inFile);   // initialize(SR);
-    SR.report_file(outFile);  // SR.report_card(1, std::cout);
+    initialize(SR, inFile);   // initialize(SR); Initialize the student records object from the input file
+    SR.report_file(outFile);  // SR.report_card(1, std::cout); Calls a member function of SR to output report card to file
     
     std::cout << std::endl << std::endl;
     return (0);

@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 
-class Student{
+class Student{ // Student class
 private:
     int id;
     std::string name;
@@ -15,7 +15,7 @@ public:
     std::string get_name() const;
 };
 
-class Course{
+class Course{ // Course class
 private:
     int id;
     std::string name;
@@ -28,7 +28,7 @@ public:
     int get_credits() const;
 };
 
-class Grade{
+class Grade{ // Grade class
 private:
     int student_id;
     int course_id;
@@ -41,7 +41,7 @@ public:
     char get_grade() const;
 };
 
-class StudentRecords{
+class StudentRecords{ // StudentRecords class
 private:
     std::vector<Student> students;
     std::vector<Course> courses;
