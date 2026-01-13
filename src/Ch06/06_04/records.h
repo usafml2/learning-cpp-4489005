@@ -10,9 +10,9 @@ private:
     std::string name;
 
 public:
-    Student(int the_id, std::string the_name);
-    int get_id() const;
-    std::string get_name() const;
+    Student(int the_id, std::string the_name); // constructor definition
+    int get_id() const; // getter for id
+    std::string get_name() const; // getter for name
 };
 
 class Course{ // Course class

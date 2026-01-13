@@ -106,8 +106,8 @@ std::string StudentRecords::get_course_name(int cid) const{ // get course name
     return courses[j].get_name();
 }
 
-void StudentRecords::report_card(int sid, std::ostream& stream){ // print report card
-    float points = 0.0f, credits = 0.0f;
+void StudentRecords::report_card(int sid, std::ostream& stream){ // print report card function
+    float points = 0.0f, credits = 0.0f; // Data type declarations and initializations for variables points and credits.
     stream << std::endl << "Report Card for " << get_student_name(sid) << std::endl;
     for (Grade& grd : grades)
         if (grd.get_student_id() == sid){

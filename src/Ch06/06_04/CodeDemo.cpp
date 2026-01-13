@@ -2,34 +2,34 @@
 // Challenge Solution 06_04
 // Upgrade to work with files, by Eduardo Corpeño 
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include "records.h"
+#include <iostream> // for standard I/O
+#include <fstream> // for file I/O
+#include <vector> // for std::vector
+#include "records.h" // include StudentRecords class definition
 
-// Function prototypes for 2 new functions
+// Function prototypes for previous and new functions
 void initialize(StudentRecords&); // previous version. & is for passing by reference
 void initialize(StudentRecords&, std::ifstream&); // new version. & is for passing by reference
 
 int main(){
-    StudentRecords SR;
-    int id;
+    StudentRecords SR; // create StudentRecords object
+    int id; // student id as integer type.
     std::ifstream inFile; // new version. Created file stream object inFile
     std::ofstream outFile; // new version. Created file stream object outFile
 
     initialize(SR, inFile);   // initialize(SR); Initialize the student records object from the input file
-    SR.report_file(outFile);  // SR.report_card(1, std::cout); Calls a member function of SR to output report card to file
+    SR.report_file(outFile);  // SR.report_card(1, std::cout); Calls a member function of SR to output report card to file.
     
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl << std::endl; // blank lines for spacing
     return (0);
 }
 
-void initialize(StudentRecords& srec, std::ifstream& inFile){
-    std::string str, name;
-    int sid, cid;
-    unsigned char credits;
-    char grade;
-    int count = 0;
+void initialize(StudentRecords& srec, std::ifstream& inFile){ // new version. Initialize student records from files. & is for passing by reference srec and inFile
+    std::string str, name; // string variables for reading data
+    int sid, cid; // student id and course id as integer types
+    unsigned char credits; // course credits as unsigned char type
+    char grade; // grade as char type
+    int count = 0; // counter for number of records
 
     inFile.open("students.txt");
     if (inFile.fail())
