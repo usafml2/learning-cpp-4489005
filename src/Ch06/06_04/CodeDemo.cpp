@@ -84,9 +84,10 @@ void initialize(StudentRecords& srec, std::ifstream& inFile){ // new version. In
     }
 }
 
-void initialize(StudentRecords& srec){
+void initialize(StudentRecords& srec){ // previous version. Initialize student records with hardcoded data. & is for passing by reference srec
     srec.add_student(1, "George P. Burdell");
     srec.add_student(2, "Nancy Rhodes");
+    
 
     srec.add_course(1, "Algebra", 5);
     srec.add_course(2, "Physics", 4);
@@ -99,4 +100,5 @@ void initialize(StudentRecords& srec){
     srec.add_grade(2, 1, 'A'); 
     srec.add_grade(2, 2, 'A');
     srec.add_grade(2, 4, 'B');
+    
 }
