@@ -22,7 +22,7 @@ int main(){ // Main function - execution starts here
     std::cout << "a + b = " << a + b << std::endl; // Output the sum of a and b
     std::cout << "b - a = " << b - a << std::endl; // Output the difference of b and a
     unsigned int positive; // Declaration of an unsigned integer variable
-    positive = b - a; //
+    positive = b - a; // Assignment of the difference of b and a to variable positive
     std::cout << "b - a (unsigned) = " << positive << std::endl; // Output the value of positive
     // Note: The value will be a large positive number due to underflow
     // (unsigned) is used to store only non-negative values
