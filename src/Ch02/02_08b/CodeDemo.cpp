@@ -3,6 +3,8 @@
 // Arrays, by Eduardo Corpeño 
 
 #include <iostream>
+#include <cstddef> // For size_t
+#include <array>   // For std::size (C++17 feature)
 
 //#define AGE_LENGTH 4
 
@@ -41,6 +43,10 @@ int main(){
     //size of one element yields the count of elements.
         std::cout << "temp[" << i << "] = " << temperature[i] << std::endl; // Output each element using a loop
     }
+    std::cout << sizeof(temperature) << std::endl;
+    std::cout << sizeof(temperature[0]) << std::endl;
+    std::cout << sizeof(temperature)/sizeof(temperature[0]) << std::endl;
+    //std::cout << std::array::size(temperature) << std::endl; ? // C++17 feature, but shown here for educational purposes
     std::cout << std::endl << std::endl; // New lines for better readability
     return (0);
 }
