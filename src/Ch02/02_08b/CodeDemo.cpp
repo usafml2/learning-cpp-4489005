@@ -28,5 +28,19 @@ int main(){
     std::cout << "temp[2] = " << temperature[2] << std::endl; // Output each element of the temperature array
 
     std::cout << std::endl << std::endl; // New lines for better readability
+
+    std::cout << "Outputting the arrays using loops:" << std::endl; // Indicate that we will output using loops
+    
+    for(size_t i = 0; i < AGE_LENGTH; ++i){ // Loop through the age array
+        std::cout << "Age[" << i << "] = " << age[i] << std::endl; // Output each element using a loop
+    }
+    std::cout << std::endl; // New line for better readability
+    for(size_t i = 0; i < sizeof(temperature)/sizeof(temperature[0]); ++i){ // Loop through the temperature array
+    // sizeof(temperature)/sizeof(temperature[0]) calculates the number of elements in the temperature array.
+    // The division by sizeof(temperature[0]) gives the size of a single element, so the total size divided by the
+    //size of one element yields the count of elements.
+        std::cout << "temp[" << i << "] = " << temperature[i] << std::endl; // Output each element using a loop
+    }
+    std::cout << std::endl << std::endl; // New lines for better readability
     return (0);
 }
