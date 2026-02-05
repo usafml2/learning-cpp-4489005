@@ -6,9 +6,9 @@
 #include <string> // std::string
 
 int main(){ // Main function - execution starts here
-    std::string str; // Variable to hold user input
+    std::string str; // str is a variable to hold user input of class string
     std::cout << "What is your name?" << std::flush; // Prompt user for their name
-    std::cin >> str; // Read user input into variable
+    std::cin >> str; // Read user input into variable. Here str is a string used to store the name
     std::cout << "Nice to meet you, " << str << "!" << std::endl; // Greet the user
 
     std::cout << std::endl << std::endl; // Add some space before exiting
