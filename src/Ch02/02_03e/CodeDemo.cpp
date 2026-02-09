@@ -6,7 +6,8 @@
 
 int a, b = 5; // single line comment. // Declaration of two integer variables.
 // Their scope is global because they are declared outsie of the main function.
-// Variable a is uninitialized, while variable b is initialized to 5.
+// Variable a is uninitialized, actually to 0 automatically by default.
+// while variable b is initialized to 5.
 
 /* Multi
 *  line
