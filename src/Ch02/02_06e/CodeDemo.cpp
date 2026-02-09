@@ -17,7 +17,8 @@ int main(){ // main function, program execution starts
 #endif // end of the conditional compilation block
     large += small; // Shorthand for "large = large + small;"
     std::cout << "The large integer is " << large << std::endl; // print the value of large 
-
+    std::cout << "The small integer is " << int(small) << std::endl; // print the value of small.
+    // Cast small to int to avoid printing a character like %.
     std::cout << std::endl << std::endl; // print two new lines
     return (0); // return 0 to indicate successful completion
 }
