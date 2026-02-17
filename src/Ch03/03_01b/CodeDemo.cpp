@@ -2,8 +2,8 @@
 // Exercise 03_01
 // Structures, by Eduardo Corpeño 
 
-#include <iostream>
-#include <string>
+#include <iostream> // The iostream header is included to allow us to use the standard input/output stream objects, such as std::cout, which we will use to output information about the cow.
+#include <string> // The string header is included to allow us to use the std::string class, which we will use to store the name of the cow as a string.
 
 enum class cow_purpose {dairy, meat, hide, pet
 }; // The enum class is a scoped enumeration, which means that the enumerators are accessed using the scope resolution operator (::) and are not implicitly converted to integers. This provides better type safety and prevents naming conflicts or namespace pollution.

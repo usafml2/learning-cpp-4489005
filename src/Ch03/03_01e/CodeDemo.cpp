@@ -2,23 +2,23 @@
 // Exercise 03_01
 // Structures, by Eduardo Corpeño 
 
-#include <iostream>
-#include <string>
+#include <iostream> // The iostream header is included to allow us to use the standard input/output stream objects, such as std::cout, which we will use to output information about the cow.
+#include <string> // The string header is included to allow us to use the std::string class, which we will use to store the name of the cow as a string.
 
 enum class cow_purpose {dairy, meat, hide, pet}; // The enum class is a scoped enumeration, which means that the enumerators are accessed using the scope resolution operator (::) and are not implicitly converted to integers. This provides better type safety and prevents naming conflicts.
 
-struct cow{
-    std::string name;
+struct cow{ // A structure is a user-defined data type that groups related variables of different types together. In this case, we are defining a structure called "cow" that has three members: name, age, and purpose.
+    std::string name; // The name member is of type std::string, which is a standard library class that represents a sequence of characters. This allows us to store the name of the cow as a string.
     int age;
-    cow_purpose purpose;
+    cow_purpose purpose; // The purpose member is of type cow_purpose, which is the enum class we defined earlier. This allows us to specify the purpose of the cow using the enumerators defined in the cow_purpose enum class.
 };
 
 int main(){
-    cow my_cow;
+    cow my_cow; // We can create an instance of the cow structure called "my_cow". This allows us to access the members of the structure and assign values to them.
     my_cow.age = 5;
     my_cow.name = "Betsy";
-    my_cow.purpose = cow_purpose::dairy;
-    std::cout << my_cow.name << " is a type-" << (int) my_cow.purpose << " cow." << std::endl;
+    my_cow.purpose = cow_purpose::dairy; // We can also assign the purpose of the cow using the enumerators defined in the cow_purpose enum class. In this case, we are assigning the purpose of the cow to dairy.
+    std::cout << my_cow.name << " is a type-" << (int) my_cow.purpose << " cow." << std::endl;// We can also output the information about the cow using the members of the structure. In this case, we are outputting the name and purpose of the cow. We need to cast the purpose to an integer to output it as a number, since it is an enum class.
     std::cout << my_cow.name << " is " << my_cow.age << " years old." << std::endl;
     
     std::cout << std::endl << std::endl;
