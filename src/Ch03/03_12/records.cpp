@@ -12,7 +12,7 @@ std::string Student::get_name() const{ // accessor function. getter function
 }
 
 Course::Course(int the_id, std::string the_name, unsigned char the_credits){ // constructor
-    id = the_id; //
+    id = the_id; // assign the_id to id
     name = the_name;
     credits = the_credits;
 }
