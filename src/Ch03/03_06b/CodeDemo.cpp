@@ -2,8 +2,8 @@
 // Exercise 03_06
 // Pointers, by Eduardo Corpeño 
 
-#include <iostream>
-#include <string>
+#include <iostream> // for std::cout, std::endl
+#include <string> // for std::string, not used in this code but included as per the original snippet
 
 int main(){
     int a = 37;
