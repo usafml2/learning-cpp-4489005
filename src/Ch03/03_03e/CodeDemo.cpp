@@ -26,6 +26,13 @@ public: // Public member functions of the cow class, which can be accessed and c
     void set_age(int new_age){ // Setter function to update the age of the cow.
         age = new_age; // Assign the new age to the age member variable of the cow class.
     }
+    void set_purpose(cow_purpose new_purpose){ // Setter function to update the purpose of the cow.
+        purpose = new_purpose; // Assign the new purpose to the purpose member variable of the cow class.
+    }
+    void set_name(std::string new_name){ // Setter function to update the name of the cow.
+        name = new_name; // Assign the new name to the name member variable of the cow class.
+    }
+    
 private: // Private member variables of the cow class, which can only be accessed and modified through the public member functions.
     std::string name; // Member variable to store the name of the cow.
     int age;
@@ -35,6 +42,7 @@ private: // Private member variables of the cow class, which can only be accesse
 int main(){
     cow my_cow("Hildy", 7, cow_purpose::pet); // Create a cow object with name "Hildy", age 7, and purpose "pet". :: is
     // the scope resolution operator, used to access members of an enum class. Its scope is outside the main function, so we need to specify that we want to use the cow_purpose enum class and its pet member.
+    // my_cow.set_age(8); // Update the age of the cow object to 8 using the set_age member function.
     std::cout << my_cow.get_name() << " is a type-" << (int) my_cow.get_purpose() << " cow." << std::endl;
     std::cout << my_cow.get_name() << " is " << my_cow.get_age() << " years old." << std::endl;
     
