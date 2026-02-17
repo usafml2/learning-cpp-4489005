@@ -41,8 +41,8 @@ private: // Private member variables of the cow class, which can only be accesse
 
 int main(){
     cow my_cow("Hildy", 7, cow_purpose::pet); // Create a cow object with name "Hildy", age 7, and purpose "pet". :: is
-    // the scope resolution operator, used to access members of an enum class. Its scope is outside the main function, so we need to specify that we want to use the cow_purpose enum class and its pet member.
-    // my_cow.set_age(8); // Update the age of the cow object to 8 using the set_age member function.
+    // the scope resolution operator, used to access members of an enum class. Its scope is outside the main function, so we need to specify that we want to use the cow_purpose enum class and its pet member. 
+    // my_cow.set_age(8); // Update the age of the cow object to 8 using the set_age member function.Could not call set_age or set_purpose because they are not const functions, and we are trying to call them on a const object (my_cow). 
     std::cout << my_cow.get_name() << " is a type-" << (int) my_cow.get_purpose() << " cow." << std::endl;
     std::cout << my_cow.get_name() << " is " << my_cow.get_age() << " years old." << std::endl;
     
