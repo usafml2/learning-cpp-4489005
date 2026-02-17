@@ -6,7 +6,7 @@
 #include <string>
 
 enum class cow_purpose {dairy, meat, hide, pet
-};
+}; // The enum class is a scoped enumeration, which means that the enumerators are accessed using the scope resolution operator (::) and are not implicitly converted to integers. This provides better type safety and prevents naming conflicts.
 
 struct cow{
    std::string name;
