@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-enum class cow_purpose {dairy, meat, hide, pet};
+enum class cow_purpose {dairy, meat, hide, pet}; // This is an enumeration that defines the different purposes a cow can have. The "enum class" syntax is used to create a scoped enumeration, which means that the enumerators are accessed using the scope resolution operator (::) and do not pollute the global namespace.
 
 class cow{ // This is the class definition, which includes the data members and member functions of the class.
 public: // This is the public section of the class, which includes the member functions that can be accessed from outside the class.
