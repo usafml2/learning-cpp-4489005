@@ -16,28 +16,28 @@ public: // The public access specifier means that the members declared after it 
     std::string get_name() const; // This is the declaration of a const member function that returns the student's name.
 };
 
-class Course{
+class Course{ // This is the declaration of the Course class. The Course class will have data members for the course's ID, name, and number of credits, and member functions to access those data members.
 private:
-    int id;
-    std::string name;
-    unsigned char credits;
+    int id; // The id data member will store the course's ID, the name data member will store the course's name, and the credits data member will store the number of credits for the course. We use int to store the ID because it is a simple and efficient way to represent numeric identifiers. We use std::string to store the name because it is a convenient and efficient way to handle strings in C++. We use unsigned char to store the number of credits because it is a small positive integer that can represent values from 0 to 255, which is sufficient for most courses.
+    std::string name; // The id data member will store the course's ID, the name data member will store the course's name, and the credits data member will store the number of credits for the course. We use int to store the ID because it is a simple and efficient way to represent numeric identifiers. We use std::string to store the name because it is a convenient and efficient way to handle strings in C++. We use unsigned char to store the number of credits because it is a small positive integer that can represent values from 0 to 255, which is sufficient for most courses.
+    unsigned char credits; // The id data member will store the course's ID, the name data member will store the course's name, and the credits data member will store the number of credits for the course. We use int to store the ID because it is a simple and efficient way to represent numeric identifiers. We use std::string to store the name because it is a convenient and efficient way to handle strings in C++. We use unsigned char to store the number of credits because it is a small positive integer that can represent values from 0 to 255, which is sufficient for most courses.
 
-public:
-    Course(int the_id, std::string the_name, unsigned char the_credits);
-    int get_id() const;
-    std::string get_name() const;
-    int get_credits() const;
+public: // The public access specifier means that the members declared after it are accessible from outside the class. This is where we will declare the constructor and the member functions to access the data members.
+    Course(int the_id, std::string the_name, unsigned char the_credits); // This is the declaration of the constructor for the Course class. The constructor takes three parameters: the_id, which will be used to initialize the id data member, the_name, which will be used to initialize the name data member, and the_credits, which will be used to initialize the credits data member.
+    int get_id() const; // This is the declaration of a const member function that returns the course's ID.
+    std::string get_name() const; // This is the declaration of a const member function that returns the course's name.
+    int get_credits() const; // This is the declaration of a const member function that returns the number of credits for the course. We return an int instead of unsigned char because it is more common to use int for numeric values in C++, and it can still represent the same range of values as unsigned char.
 };
 
-class Grade{
-private:
-    int student_id;
-    int course_id;
-    char grade;
+class Grade{ // This is the declaration of the Grade class. The Grade class will have data members for the student ID, course ID, and letter grade, and member functions to access those data members.
+private: // The private access specifier means that the members declared after it are only accessible from within the class. This is a common practice to encapsulate the data and provide controlled access through public member functions.
+    int student_id; // The student_id data member will store the ID of the student associated with this grade, the course_id data member will store the ID of the course associated with this grade, and the grade data member will store the letter grade (e.g., 'A', 'B', 'C', etc.) associated with this grade. We use int to store the student ID and course ID because they are simple and efficient ways to represent numeric identifiers. We use char to store the letter grade because it is a single character that can represent the grade.
+    int course_id;// The student_id data member will store the ID of the student associated with this grade, the course_id data member will store the ID of the course associated with this grade, and the grade data member will store the letter grade (e.g., 'A', 'B', 'C', etc.) associated with this grade. We use int to store the student ID and course ID because they are simple and efficient ways to represent numeric identifiers. We use char to store the letter grade because it is a single character that can represent the grade.
+    char grade; // The student_id data member will store the ID of the student associated with this grade, the course_id data member will store the ID of the course associated with this grade, and the grade data member will store the letter grade (e.g., 'A', 'B', 'C', etc.) associated with this grade. We use int to store the student ID and course ID because they are simple and efficient ways to represent numeric identifiers. We use char to store the letter grade because it is a single character that can represent the grade.
 
-public:
-    Grade(int sid, int cid, char grd);
-    int get_student_id() const;
-    int get_course_id() const;
-    char get_grade() const;
+public: // The public access specifier means that the members declared after it are accessible from outside the class. This is where we will declare the constructor and the member functions to access the data members.
+    Grade(int sid, int cid, char grd); // This is the declaration of the constructor for the Grade class. The constructor takes three parameters: sid, which will be used to initialize the student_id data member, cid, which will be used to initialize the course_id data member, and grd, which will be used to initialize the grade data member.
+    int get_student_id() const; // This is the declaration of a const member function that returns the ID of the student associated with this grade.
+    int get_course_id() const; // This is the declaration of a const member function that returns the ID of the course associated with this grade.
+    char get_grade() const; // This is the declaration of a const member function that returns the letter grade (e.g., 'A', 'B', 'C', etc.) associated with this grade.
 };
