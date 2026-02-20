@@ -11,14 +11,14 @@
 // cow_purpose enum class.
 
 int main(){
-    std::vector<cow> cattle;
+    std::vector<cow> cattle; // We declare a vector of cow objects called cattle. A vector is a dynamic array that can grow and shrink in size as needed. We use the cow class as the type of the elements in the vector, which means that each element in the vector will be an object of the cow class.
     
-    cattle.push_back(cow("Betty", 6, cow_purpose::meat));
-    cattle.push_back(cow("Libby", 4, cow_purpose::hide));
-    cattle.push_back(cow("Trudy", 5, cow_purpose::pet));
-    cattle.push_back(cow("Betsy", 2, cow_purpose::dairy));
+    cattle.push_back(cow("Betty", 6, cow_purpose::meat)); // We use the push_back member function of the vector to add a new cow object to the end of the cattle vector. The push_back function takes an object of the cow class as an argument, which we create using the constructor of the cow class. We pass the name "Betty", the age 6, and the purpose cow_purpose::meat as arguments to the constructor to create a new cow object and add it to the cattle vector.
+    cattle.push_back(cow("Libby", 4, cow_purpose::hide)); // We use the push_back member function of the vector to add another cow object to the end of the cattle vector. We create a new cow object using the constructor of the cow class, and we pass the name "Libby", the age 4, and the purpose cow_purpose::hide as arguments to the constructor to create a new cow object and add it to the cattle vector.
+    cattle.push_back(cow("Trudy", 5, cow_purpose::pet)); // We use the push_back member function of the vector to add another cow object to the end of the cattle vector. We create a new cow object using the constructor of the cow class, and we pass the name "Trudy", the age 5, and the purpose cow_purpose::pet as arguments to the constructor to create a new cow object and add it to the cattle vector.
+    cattle.push_back(cow("Betsy", 2, cow_purpose::dairy)); // We use the push_back member function of the vector to add another cow object to the end of the cattle vector. We create a new cow object using the constructor of the cow class, and we pass the name "Betsy", the age 2, and the purpose cow_purpose::dairy as arguments to the constructor to create a new cow object and add it to the cattle vector.
 
-    std::cout << "The first cow is " << cattle.begin()->get_name() << std::endl;
+    std::cout << "The first cow is " << cattle.begin()->get_name() << std::endl; // We use the begin() member function of the vector to get an iterator that points to the first element in the cattle vector, which is the first cow object. We then use the arrow operator (->) to call the get_name() member function of the cow class on the cow object that the iterator points to, which returns the name of the first cow. We output this name using std::cout.
     std::cout << "At index 1 we have " << cattle[1].get_name() << std::endl;
     std::cout << "Next to last is " << prev(cattle.end(), 2)->get_name() << std::endl;// prev() is a function that takes an iterator and a number, and returns an iterator that is that many positions before the original iterator. In this case, we want to get the cow that is two positions before the end of the vector, which is the next to last cow.
     std::cout << "The last cow is " << (cattle.end() -1)->get_name() << std::endl; // end() returns an iterator that points to one past the last element in the vector, so we need to subtract 1 to get the last element.
