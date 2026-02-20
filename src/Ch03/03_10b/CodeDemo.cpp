@@ -2,10 +2,13 @@
 // Exercise 03_10
 // Using Objects with Vectors, by Eduardo Corpeño 
 
-#include <vector>
-#include <iostream>
-#include <string>
-#include "cow.h"
+#include <vector> // We need to include the vector header to use the std::vector class.
+#include <iostream> // We need to include the iostream header to use the std::cout
+// object for output.
+#include <string> // We need to include the string header to use the
+// std::string class for the cow's name.
+#include "cow.h" // We need to include the cow.h header to use the cow class and the
+// cow_purpose enum class.
 
 int main(){
     std::vector<cow> cattle;
